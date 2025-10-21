@@ -13,12 +13,10 @@ jobs:
       security-events: write
       actions: read
       contents: read
+
     strategy:
-      fail-fast: false
       matrix:
-        include:
-        - language: csharp
-          build-mode: none
+        language: [csharp]
 
     steps:
       - name: Checkout repository
